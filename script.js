@@ -54,3 +54,9 @@ function isValidLength(length) {
   var parsedLength = parseInt(length);
   return !isNaN(parsedLength) && parsedLength >= 8 && parsedLength <= 128;
 }
+
+function generateRandomPassword(length, includeLowercase, includeUppercase, includeNumeric, includeSpecial) {
+  var lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
+  var uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+  var numericChars = "0123456789";
+  var specialChars = "!@#$%^&*()_+~`|}{[]:;?><,./-=";
