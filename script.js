@@ -49,3 +49,8 @@ function generatePassword() {
 
   return password;
 }
+
+function isValidLength(length) {
+  var parsedLength = parseInt(length);
+  return !isNaN(parsedLength) && parsedLength >= 8 && parsedLength <= 128;
+}
