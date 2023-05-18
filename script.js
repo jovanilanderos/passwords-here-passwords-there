@@ -18,3 +18,11 @@ function writePassword() {
   var passwordText = document.querySelector("#password");
   passwordText.value = password;
 }
+
+function generatePassword() {
+  var passwordLength = prompt("Enter the desired password length (between 8 and 128 characters):");
+  if (!isValidLength(passwordLength)) {
+    passwordLength = prompt("Invalid length! Please enter a number between 8 and 128:");
+  }
+
+}
