@@ -39,4 +39,13 @@ function generatePassword() {
     includeSpecial = confirm("Include special characters?");
   }
 
+  var password = generateRandomPassword(
+    parseInt(passwordLength),
+    includeLowercase,
+    includeUppercase,
+    includeNumeric,
+    includeSpecial
+  );
+
+  return password;
 }
