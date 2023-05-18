@@ -96,3 +96,8 @@ function generateRandomPassword(length, includeLowercase, includeUppercase, incl
   return password;
 }
 
+function getRandomChar(characters) {
+  var randomIndex = Math.floor(Math.random() * characters.length);
+  var randomChar = characters[randomIndex];
+  return randomChar;
+}
