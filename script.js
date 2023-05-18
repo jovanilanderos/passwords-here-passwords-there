@@ -63,4 +63,36 @@ function generateRandomPassword(length, includeLowercase, includeUppercase, incl
 
   var allChars = "";
   var password = "";
+
+  if (includeLowercase) {
+    allChars = allChars + lowercaseChars;
+    password = password + getRandomChar(lowercaseChars);
+  }
+
+  if (includeUppercase) {
+    allChars = allChars + uppercaseChars;
+    password = password + getRandomChar(uppercaseChars);
+  }
+
+  if (includeNumeric) {
+    allChars = allChars + numericChars;
+    password = password + getRandomChar(numericChars);
+  }
+
+  if (includeSpecial) {
+    allChars = allChars + specialChars;
+    password = password + getRandomChar(specialChars);
+  }
+
+  var remainingLength = length - password.length;
+  var tempPassword = password;
+
+  for (var i = 0; i < remainingLength; i++) {
+    tempPassword = tempPassword + getRandomChar(allChars);
+  }
+
+  password = tempPassword;
+
+  return password;
 }
+
