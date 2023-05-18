@@ -60,3 +60,7 @@ function generateRandomPassword(length, includeLowercase, includeUppercase, incl
   var uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
   var numericChars = "0123456789";
   var specialChars = "!@#$%^&*()_+~`|}{[]:;?><,./-=";
+
+  var allChars = "";
+  var password = "";
+}
